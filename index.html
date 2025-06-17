@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anuj Life | Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <h1 class="logo">Anuj Life</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+        <button class="toggle-theme">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <h2 class="typewriter">Hi, I’m Anuj — Full Stack Developer</h2>
+      <p>Creating stunning websites with modern technologies and user-centric design.</p>
+      <a href="#projects" class="btn">Explore Projects</a>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I specialize in building responsive websites, web apps, and beautiful user experiences. I love turning ideas into reality through code.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="filter-buttons">
+        <button onclick="filterProjects('all')">All</button>
+        <button onclick="filterProjects('web')">Web</button>
+        <button onclick="filterProjects('design')">Design</button>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" data-category="web" onclick="openModal('Project 1', 'Modern Portfolio site using HTML, CSS, JS')">
+          <img src="assets/project1.jpg" alt="Project 1" />
+          <h3>Portfolio Site</h3>
+        </div>
+        <div class="project-card" data-category="design" onclick="openModal('Project 2', 'Creative blog design with animations')">
+          <img src="assets/project2.jpg" alt="Project 2" />
+          <h3>Animated Blog</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="section">
+    <div class="container">
+      <h2>Resume</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>2023 - Present</h3>
+          <p>Frontend Developer at Creative Tech</p>
+        </div>
+        <div class="timeline-item">
+          <h3>2021 - 2023</h3>
+          <p>Bachelor's in Computer Science - XYZ University</p>
+        </div>
+      </div>
+      <a href="#" class="btn">Download Resume</a>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Anuj Life | All rights reserved.</p>
+  </footer>
+</body>
+</html>
